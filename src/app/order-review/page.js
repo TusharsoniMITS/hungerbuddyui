@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Grid, Button } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -14,8 +14,6 @@ import { useSelector, useDispatch } from "react-redux";
 import AddressDrawer from "../components/cartcomponent/AddressDrawer";
 import { useRazorpay, RazorpayOrderOptions } from "react-razorpay";
 import { postData } from "../services/FetchNodeServices";
-import Swal from 'sweetalert2'
-
 
 export default function OrderReviewPage() {
   const theme = useTheme();
@@ -32,19 +30,28 @@ export default function OrderReviewPage() {
   // Start at 1 for Order Review
   const [currentStep, setCurrentStep] = useState(1);
   const [drawerStatus, setDrawerStatus] = useState(false);
+const [user, setUser] = useState(null);
   const { error, isLoading, Razorpay } = useRazorpay();
+  useEffect(() => {
+  if (typeof window !== "undefined") {
+    const local = localStorage.getItem("USER");
+    if (local) {
+      setUser(JSON.parse(local));
+    }
+  }
+}, []);
 
   // var user=useSelector((state)=>state.user)
-  var local = localStorage.getItem('USER')
-  var user = JSON.parse(local)
+  // var local = localStorage.getItem('USER')
+  // var user = JSON.parse(local)
   var btnMessage
   var userData
   if (user == null) {
-    userData = 'Not Login'
-    btnMessage = 'Sign In'
+    userData = "Not Login"
+    btnMessage = "Sign In"
   } else {
     userData = Object.values(user)[0]
-    btnMessage = 'Make Payment'
+    btnMessage = "Make Payment"
   }
   const handleMakePayment = () => {
     if (userData == 'Not Login') {
