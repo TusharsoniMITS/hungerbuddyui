@@ -1,0 +1,74 @@
+.maincontainer {
+
+    width: 100%;
+    height: auto;
+}
+
+.stylebar {
+    width: 100%;
+    display: flex;
+    /* background: linear-gradient(90deg,#FFF8F2,#FFF2E8); */
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #ECECEC;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.textStyle {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.styleone {
+    font-size: clamp(0.3rem, 1vw + 0.3rem, 2rem);
+    font-weight: bolder;
+}
+
+.styletwo {
+    font-size: clamp(0.3rem, 0.8vw + 0.3rem, 1.5rem);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.stylethree {
+    font-size: clamp(0.1rem, 1vw + 0.1rem, 0.8rem);
+    font-weight: 800;
+    color: #FF7A00;
+}
+
+.stylename {
+    font-size: clamp(0.3rem, 1vw + 0.3rem, 1rem);
+
+}
+
+.logoContainer {
+    margin-left: 10px;
+    width: 20%;
+    height: 18%;
+    border-radius: 50%;
+    background: #FFF0E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 4px 12px #E86500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.logo {
+    margin-top: 5px;
+    object-fit: contain;
+}
+
+.manage {
+    display: flex;
+    align-items: center;
+}

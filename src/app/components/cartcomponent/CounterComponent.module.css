@@ -1,0 +1,42 @@
+/* Stepper Card */
+.stepperCard {
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: #FFFFFF;
+  border: 1px solid #F3E5D8;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Step Icons */
+.stepIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all .3s ease;
+}
+
+/* Active Step */
+.stepIconActive {
+  background: linear-gradient(135deg, #FF7A00, #FF9A1F);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(255,122,0,.3);
+}
+
+/* Inactive Step */
+.stepIconInactive {
+  background: #FFF8F2;
+  color: #9CA3AF;
+  border: 2px solid #FFD5B3;
+}
+
+/* Completed Step (optional) */
+.stepIconCompleted {
+  background: #22C55E;
+  color: white;
+  border: none;
+}

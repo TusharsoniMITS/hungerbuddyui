@@ -1,0 +1,131 @@
+.card {
+  background: #FFFFFF;
+  border: 1px solid #F3E5D8;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all .3s ease;
+}
+
+.card:hover {
+  background: #FFF4EC;
+  border-color: #FFD5B3;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0,0,0,.08);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Coupon Icon */
+.couponIcon {
+  color: #FF7A00;
+  font-size: 26px !important;
+}
+
+/* Text */
+.text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+/* Arrow */
+.arrowIcon {
+  color: #6B7280;
+}
+
+/* Drawer */
+.drawerPaper {
+  width: 100%;
+  max-width: 420px;
+  padding: 24px;
+  background: #FFF8F2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.drawerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawerTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1F2937;
+}
+
+.inputContainer {
+  display: flex;
+  gap: 12px;
+}
+
+/* Coupon Input */
+
+.couponInput{
+  flex:1;
+}
+
+/* Apply Button */
+
+.applyBtn{
+  background: linear-gradient(135deg,#FF7A00,#FF9A1F);
+  color:white;
+  border:none;
+  border-radius:12px;
+  padding:12px 20px;
+  cursor:pointer;
+  font-weight:600;
+  transition:.3s;
+}
+
+.applyBtn:hover{
+  background:linear-gradient(135deg,#E86500,#FF7A00);
+}
+
+/* Empty State */
+
+.emptyContainer{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  margin-top:60px;
+  gap:18px;
+}
+
+.emptyIconContainer{
+  width:70px;
+  height:70px;
+  border-radius:18px;
+  background:#FFF1E6;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.emptyIcon{
+  color:#FF7A00;
+  font-size:32px !important;
+}
+
+.emptyText{
+  color:#6B7280;
+  font-size:15px;
+  text-align:center;
+  line-height:1.6;
+}

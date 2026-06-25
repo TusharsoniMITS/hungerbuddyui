@@ -1,0 +1,135 @@
+.searchContainer {
+    width: 60%;
+    padding: 0 10px;
+}
+
+.searchWrapper {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    padding: 11px 12px;
+    gap: 10px;
+    height: 37px;
+}
+
+.searchInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14;
+    height: auto;
+    color: #000;
+    background: #FFFFFF;
+}
+
+.searchInput::placeholder {
+    color: #9c9c9c;
+    font-size: 12px;
+}
+
+.icon {
+    flex-shrink: 0;
+}
+
+.separator {
+    width: 1px;
+    height: 18px;
+    background-color: #c5c5c5;
+    margin: 0 8px;
+}
+.searchContainer {
+    width: 60%;
+    padding: 0 10px;
+    position: relative;
+}
+
+.searchResult {
+    position: absolute;
+    top: 48px;
+    left: 10px;
+    right: 10px;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    z-index: 9999;
+    overflow: hidden;
+    max-height: 320px;
+    overflow-y: auto;
+    animation: searchFade 0.2s ease;
+}
+
+.searchResult::-webkit-scrollbar {
+    width: 5px;
+}
+
+.searchResult::-webkit-scrollbar-thumb {
+    background: #d4d4d4;
+    border-radius: 10px;
+}
+
+.searchCard {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.searchCard:last-child {
+    border-bottom: none;
+}
+
+.searchCard:hover {
+    background: #fff7ed;
+}
+
+.searchImage {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.foodInfo {
+    flex: 1;
+    overflow: hidden;
+}
+
+.foodName {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.foodCategory {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+.searchPrice {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ff6b00;
+}
+
+@keyframes searchFade {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

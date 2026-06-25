@@ -1,0 +1,336 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1F2937;
+}
+
+/* Address Card */
+
+.addressCard {
+  background: #FFFFFF;
+  border: 1px solid #F3E5D8;
+  border-radius: 20px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.05);
+  transition: .3s;
+}
+
+.addressCard:hover {
+  border-color: #FFD5B3;
+  box-shadow: 0 12px 28px rgba(0,0,0,.08);
+}
+
+/* Top Row */
+
+.nameRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nameContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Name */
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1F2937;
+}
+
+/* Edit Button */
+
+.editButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  background: #FFF1E6;
+  color: #FF7A00;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.editButton:hover {
+  background: #FF7A00;
+  color: white;
+}
+
+.addressDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.addressText {
+  color: #6B7280;
+  line-height: 1.7;
+  font-size: .95rem;
+}
+
+.phoneText {
+  color: #1F2937;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Address Tag */
+
+.avatar{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#FF7A00,#FF9A1F);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.addressType{
+    display:inline-flex;
+    align-items:center;
+    margin-top:5px;
+    background:#FFF4EC;
+    color:#FF7A00;
+    padding:5px 12px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.infoRow{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+}
+
+.icon{
+    color:#FF7A00;
+    font-size:22px !important;
+    margin-top:3px;
+}
+
+.city{
+    color:#6B7280;
+    margin-top:4px;
+    line-height:1.6;
+}
+
+.divider{
+    border-color:#F3E5D8 !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1F2937;
+  letter-spacing: .3px;
+}
+
+/* Address Card */
+
+.addressCard {
+  background: #FFFFFF;
+  border: 1px solid #F3E5D8;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.06);
+  transition: all .3s ease;
+}
+
+.addressCard:hover {
+  transform: translateY(-2px);
+  border-color: #FFB36A;
+  box-shadow: 0 14px 30px rgba(255,122,0,.12);
+}
+
+/* Top */
+
+.nameRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nameContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Avatar */
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#FF7A00,#FF9A1F);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(255,122,0,.25);
+}
+
+/* Name */
+
+.name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1F2937;
+}
+
+/* Home Badge */
+
+.addressType {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  background: #FFF4EC;
+  color: #FF7A00;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Divider */
+
+.divider {
+  border-color: #F3E5D8 !important;
+  margin: 2px 0 !important;
+}
+
+/* Address */
+
+.addressDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.infoRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.icon {
+  color: #FF7A00;
+  font-size: 24px !important;
+  margin-top: 2px;
+}
+
+.addressText {
+  color: #374151;
+  font-size: .98rem;
+  line-height: 1.7;
+}
+
+.city {
+  color: #6B7280;
+  margin-top: 4px;
+  line-height: 1.6;
+  font-size: .92rem;
+}
+
+.phoneText {
+  color: #374151;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Edit Button */
+
+.editButton {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px !important;
+  background: #FFF1E6 !important;
+  color: #FF7A00 !important;
+  transition: all .3s ease !important;
+}
+
+.editButton:hover {
+  background: #FF7A00 !important;
+  color: white !important;
+  transform: scale(1.08);
+}
+
+/* Responsive */
+
+@media (max-width:768px) {
+
+  .addressCard {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .avatar {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .addressText,
+  .phoneText,
+  .city {
+    font-size: .9rem;
+  }
+
+  .editButton {
+    width: 38px;
+    height: 38px;
+  }
+
+}
