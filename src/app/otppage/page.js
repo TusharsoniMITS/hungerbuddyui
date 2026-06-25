@@ -1,11 +1,11 @@
 "use client"
 import { Grid, TextField } from "@mui/material";
 import { OtpInput } from 'reactjs-otp-input';
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSelector } from "react-redux";
 import { generateOTP } from "../services/FetchNodeServices";
 import { useRouter, usePathname, useSearchParams } from "next/navigation"
-export default function LoginOtpPage() {
+function LoginOtpPageContent() {
   const [gOtp, setGotp] = useState(''); 
   const [otp, setOtp] = useState('');
   const user=useSelector((state)=>state.user)
@@ -157,5 +157,12 @@ export default function LoginOtpPage() {
         </div>
       </Grid>
     </div>
+  );
+}
+export default function LoginOtpPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LoginOtpPageContent />
+    </Suspense>
   );
 }
