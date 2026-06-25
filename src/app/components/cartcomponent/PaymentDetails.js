@@ -6,14 +6,14 @@ import styles from "./PaymentDetails.module.css";
 
 export default function PaymentDetails({ items }) {
 
-  const mrpTotal = items.reduce((sum, item) => sum + (item.offerprice > 0 ? item.offerprice : item.fullprice) * item.qty, 0);
+  // const mrpTotal = items.reduce((sum, item) => sum + (item.offerprice > 0 ? item.offerprice : item.fullprice) * item.qty, 0);
   const mrpprice = items.reduce((sum, item) => sum + (item.fullprice) * item.qty, 0);
   const offerprice = items.reduce((sum, item) => sum + (item.offerprice) * item.qty, 0);
   const discount = items.reduce((sum, item) => sum + (item.offerprice > 0 ? item.fullprice - item.offerprice : 0) * item.qty, 0);
   const deliveryFee = 0
 
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  // const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const total = mrpprice - discount + deliveryFee;
   const savings = discount;
@@ -25,18 +25,18 @@ export default function PaymentDetails({ items }) {
         <h3 className={styles.paymentTitle}>Payment Details</h3>
 
         <div className={styles.row}>
-          <span className={styles.label}>Product Price</span>
+          <span className={styles.label}>MRP Price</span>
           <span className={styles.value}>₹{mrpprice.toFixed(2)}</span>
         </div>
 
-        {offerprice? (
+        {/* {offerprice? (
           <div className={styles.row}>
           <span className={styles.label}>Offer Price</span>
           <span className={styles.value}>₹{offerprice.toFixed(2)}</span>
         </div>
         ):(
         <></>
-        )}
+        )} */}
         
 
         <div className={styles.row}>

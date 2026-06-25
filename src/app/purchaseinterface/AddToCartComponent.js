@@ -207,6 +207,7 @@ export default function AddToCartComponent({
                 style={{
                   fontSize: 18,
                   fontWeight: 600,
+                  color: '#000'
                 }}
               >
                 Quantity
@@ -217,6 +218,7 @@ export default function AddToCartComponent({
                   display: "flex",
                   alignItems: "center",
                   gap: 12,
+
                 }}
               >
                 <button
@@ -247,6 +249,7 @@ export default function AddToCartComponent({
                     textAlign: "center",
                     fontWeight: 700,
                     fontSize: 18,
+                    color: '#000'
                   }}
                 >
                   {quantity}

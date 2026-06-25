@@ -61,12 +61,17 @@ export default function OrderReviewPage() {
     // alert(JSON.stringify(user))
     setCurrentStep(2); // Move to Payment step
   };
-  const mrpTotal = products.reduce((sum, item) => sum + (item.offerprice > 0 ? item.offerprice : item.fullprice) * item.qty, 0);
+  // const mrpTotal = products.reduce((sum, item) => sum + (item.offerprice > 0 ? item.offerprice : item.fullprice) * item.qty, 0);
+  const mrpprice = products.reduce((sum, item) => sum + (item.fullprice) * item.qty, 0);
+
 
   const discount = products.reduce((sum, item) => sum + (item.offerprice > 0 ? item.fullprice - item.offerprice : 0) * item.qty, 0);
+
   const deliveryFee = 0
 
-  const total = mrpTotal - discount + deliveryFee;
+  // const total = mrpTotal - discount + deliveryFee;
+  const total = mrpprice - discount + deliveryFee;
+
 
 
   const options = {
@@ -227,13 +232,14 @@ export default function OrderReviewPage() {
                     onClick={handleMakePayment}
                   >
                     {btnMessage}
-                    Make Payment
                   </Button>
                 ) : (
-                  <div variant="contained"
+                  <Button
+                    variant="contained"
                     fullWidth
                     className={styles.placeOrderWaitBtn1}
-                    >Payment Step Placeholder</div>
+                    disabled
+                  >Payment Step Placeholder</Button>
                 )}
               </div>
             </Grid>
