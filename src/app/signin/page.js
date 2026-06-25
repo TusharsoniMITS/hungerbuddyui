@@ -1,12 +1,12 @@
 "use client"
 import { Grid, TextField } from "@mui/material";
 import { generateOTP, postData } from "../services/FetchNodeServices";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "next/navigation";
 
-export default function LoginPage(){
+function LoginPageContent(){
  const [mobileNo,setMobileNo]=useState('')
  const [user,setUser]=useState('')
  const [message,setMessage]=useState('')
@@ -159,4 +159,11 @@ return (
   </Grid>
   </div>
 );
+}
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LoginPageContent />
+    </Suspense>
+  );
 }
