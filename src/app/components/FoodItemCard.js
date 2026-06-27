@@ -32,7 +32,7 @@ var  router = useRouter()
       var percent = (item.fullprice - item.offerprice) / item.fullprice * 100
 
       return (<div key={item.fooditemid} className={styles.card} onClick={()=>router.push(`/productdetailcomponent/${item.fooditemid}`)}>
-        <div className={styles.imageContainer} style={{ background: '#fff' }}>
+        <div className={styles.imageContainer} style={{ background: `${mycolor[parseInt(Math.random()*10)]}` }}>
           <div className={styles.imageStyle}>
             <img
               src={`${serverURL}/images/${item.picture}`}

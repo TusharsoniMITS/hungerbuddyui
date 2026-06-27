@@ -14,18 +14,7 @@ import Header from "@/app/components/Header";
 import { Grid } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 export default function ProductDetailComponent() {
- var mycolor = [
-"#FFF4E5",
-"#FFF8D6",
-"#F1FFF0",
-"#EEF7FF",
-"#FFF0F5",
-"#F5F3FF",
-"#FFF8F2",
-"#F0FDFA",
-"#F9FAFB",
-"#FEF3C7"
-]
+
   var params = useParams()
   const { id } = useParams()
 
@@ -77,13 +66,13 @@ export default function ProductDetailComponent() {
   }, [id])
 
   return (
-    <div style={{backgroundColor:'#FFFFFF'}}>
+    <div style={{backgroundColor:'#fff'}}>
       <div>
         <Header dataRef={aboutRef} />
       </div>
       <div
         style={{
-          background: "#F0FDFA",
+          background: "#FFF8F2",
           minHeight: "100vh",
           width: matches ? "100%" : "95%",
           borderRadius: matches ? 0 : 20,
