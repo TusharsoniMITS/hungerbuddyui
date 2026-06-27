@@ -26,7 +26,7 @@ export default function Header({ dataRef, foodList, setFoodList, setCategoryClic
         var response = await getData("users/fetch_all_category");
         setCategoryList(response.data);
     };
-        useEffect(() => {
+    useEffect(() => {
 
         const local = localStorage.getItem("USER");
 
@@ -54,8 +54,8 @@ export default function Header({ dataRef, foodList, setFoodList, setCategoryClic
     useEffect(function () {
         fetchAllCategory();
     }, []);
-    const handleHome=()=>{
-        if(matches){
+    const handleHome = () => {
+        if (matches) {
             router.push('/homepage')
         }
     }
@@ -63,19 +63,19 @@ export default function Header({ dataRef, foodList, setFoodList, setCategoryClic
         <div className={styles.stylebar}>
             <div className={styles.manage}>
                 {!matches && (
-                     <div className={styles.logoContainer} onClick={()=>router.push('/homepage')}>
-                    <Image src="/images/hungerbuddyicon2.png" alt="Hunger Buddy" width={150} height={75} className={styles.logo} />
-                </div>
-                )} 
+                    <div className={styles.logoContainer} onClick={() => router.push('/homepage')}>
+                        <Image src="/images/hungerbuddyicon2.png" alt="Hunger Buddy" width={150} height={75} className={styles.logo} />
+                    </div>
+                )}
                 <div className={styles.textStyle}>
-                    <div onClick={handleHome} className={styles.styleone} style={{display: matches? 'flex' : 'block',alignItems: matches? 'center' : 'normal',fontSize: matches? '1rem' : ' ',cursor: matches? 'pointer': 'default'}}>
+                    <div onClick={handleHome} className={styles.styleone} style={{ display: matches ? 'flex' : 'block', alignItems: matches ? 'center' : 'center', fontSize: matches ? '1rem' : ' ', cursor: matches ? 'pointer' : 'default' }}>
                         Hunger<span style={{ color: '#E86500' }}>BuddyIn</span>
                     </div>
-                    <div className={styles.styletwo} style={{display: matches? 'flex' : 'block',alignItems: matches? 'center' : 'normal',cursor: matches? 'default': 'default'}}>
+                    <div className={styles.styletwo} style={{ display: matches ? 'flex' : 'block', alignItems: matches ? 'center' : 'normal', cursor: matches ? 'default' : 'default' }}>
                         <Image src='/images/delivery-man.png' alt='n' width={20} height={20} /> Delivering Happiness in 20 Minutes
                     </div>
-                    <div style={{display: matches? 'flex' : 'block',alignItems: matches? 'center' : 'normal',cursor: matches? 'default': 'default'}}>
-                        <span className={styles.stylethree}>Home</span> - <span className={styles.stylename}>{userData? userData.studentname : <span className={styles.stylename}>Jhon</span>}</span>
+                    <div style={{ display: matches ? 'flex' : 'block', alignItems: matches ? 'center' : 'center', cursor: matches ? 'default' : 'default' }}>
+                        <span className={styles.stylethree} style={{marginRight:matches?'2px':'0px'}}>Home</span> - <span className={styles.stylename} style={{marginLeft:matches?'2px':'0px'}}>{userData ? userData.studentname : <span className={styles.stylename}>Tony</span>}</span>
                     </div>
                 </div>
             </div>

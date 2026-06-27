@@ -9,12 +9,15 @@ import FooterComponent from "../components/FooterComponent";
 import Header from "../components/Header";
 import SnacksComponent from "../components/SnacksComponent";
 import { getData, postData } from "../services/FetchNodeServices";
+import HomePageSkeleton from "../homepageskeleton/HomePageSkeleton";
 
 function HomePageContent() {
+
   const [snacksList, setSnacksList] = useState([]);
   const [drinkList, setDrinkList] = useState([]);
   const [foodList, setFoodList] = useState([]);
   const [categoryClicked, setCategoryClicked] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const navigate = useRouter();
 
@@ -48,17 +51,38 @@ function HomePageContent() {
     setFoodList(response.data);
   };
 
+  // useEffect(() => {
+  //   fetchAllFood("Snacks");
+  //   fetchAllFood("Drinks");
+  //   fetchAllFoodItems();
+
+  //   const cid = searchParams.get("category");
+
+  //   if (cid) {
+  //     fetchAllFoodByCategory(cid);
+  //   }
+  // }, [searchParams]);
+
   useEffect(() => {
-    fetchAllFood("Snacks");
-    fetchAllFood("Drinks");
-    fetchAllFoodItems();
+  const loadData = async () => {
+    setLoading(true);
+
+    await Promise.all([
+      fetchAllFood("Snacks"),
+      fetchAllFood("Drinks"),
+      fetchAllFoodItems(),
+    ]);
 
     const cid = searchParams.get("category");
 
     if (cid) {
-      fetchAllFoodByCategory(cid);
+      await fetchAllFoodByCategory(cid);
     }
-  }, [searchParams]);
+
+    setLoading(false);
+  };
+  loadData();
+}, [searchParams]);
 
   useEffect(() => {
     if (categoryClicked && foodList.length > 0) {
@@ -71,6 +95,9 @@ function HomePageContent() {
     }
   }, [foodList, categoryClicked]);
 
+  if (loading) {
+  return <HomePageSkeleton />;
+}
   return (
     <div style={{ background: "#FFF8F2" }}>
       <Header
@@ -120,6 +147,7 @@ function HomePageContent() {
 }
 
 export default function HomePage() {
+  
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <HomePageContent />

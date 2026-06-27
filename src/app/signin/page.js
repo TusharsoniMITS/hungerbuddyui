@@ -40,7 +40,7 @@ return (
   <Grid size={12}>
     <div
       style={{
-        background: "white",
+        background: "#FFF8F2",
         width: "85%",
         height: 550,
         borderRadius: 20,
@@ -50,12 +50,12 @@ return (
       }}
     >
       <Grid size={6}>
-        <div style={{ padding: 28 }}>
+        <div style={{ padding: 28,color:'#FF7A00' }}>
           HungerBuddy
         </div>
       </Grid>
       <Grid size={6}>
-        <div style={{ marginLeft: 28, fontSize: 24, fontWeight: "1000" }}>
+        <div style={{ marginLeft: 28, fontSize: 24, fontWeight: "1000", color:'#595959' }}>
           Almost there!
         </div>
       </Grid>
@@ -65,7 +65,7 @@ return (
             marginLeft: 28,
             fontSize: 14,
             fontWeight: "500",
-            color: "#595959",
+            color: "#FF9A1F",
           }}
         >
           Simply sign in to place your order
@@ -87,19 +87,20 @@ return (
       <Grid size={12}>
         <div style={{ margin: 28, marginTop: 2 }}>
           <input
-            type="text"
+            type="number"
             onChange={(e)=>setMobileNo(e.target.value)}
-            placeholder="+91-"
+            placeholder="+91-9999999999"
             style={{
               width: "98%",
               height: 40,
               borderRadius: 10,
-              border: "0.1px solid #DADADA",
+              border: "0.1px solid #FF9A1F",
               color: "Black",
               fontSize: 16,
               paddingLeft: 10,
               fontWeight: 550,
-             
+              background:'#fff',
+
             }}
           />
         </div>
@@ -127,11 +128,11 @@ return (
             }}
           >
             By signing in, you agree to our{" "}
-            <span style={{ color: "#007bff", cursor: "pointer" }}>
+            <span style={{ color: "#FF9A1F", cursor: "pointer" }}>
               Terms and Conditions of Use
             </span>{" "}
             and{" "}
-            <span style={{ color: "#007bff", cursor: "pointer" }}>
+            <span style={{ color: "#FF9A1F", cursor: "pointer" }}>
               Privacy Policy
             </span>
           </div>
@@ -148,7 +149,7 @@ return (
                 height: 45,
                 border: "none",
                 borderRadius: 20,
-                background: "#0050fdff",
+                background: "#FF9A1F",
                 color: "white",
                 fontSize: 15,
                 fontWeight: 550,
@@ -168,7 +169,7 @@ return (
                 height: 45,
                 border: "none",
                 borderRadius: 20,
-                background: "#0050fdff",
+                background: "#FF9A1F",
                 color: "white",
                 fontSize: 15,
                 fontWeight: 550,
