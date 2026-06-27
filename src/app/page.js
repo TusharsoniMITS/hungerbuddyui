@@ -4,7 +4,7 @@ import HomePage from "./homepage/page";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div>
       {/* <main className={styles.main}>
         <Image
           className={styles.logo}
