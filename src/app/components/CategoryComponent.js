@@ -28,19 +28,14 @@ export default function CategoryComponent({ data, dataRef, FoodList, setFoodList
     }
 
     const settings = {
-        // dots: false,
-        // infinite: true,
-        // speed: 500,
-        // slidesToShow: matches ? 5 : 7,
-        // slidesToScroll: 1,
-        // arrows: false,
-
         dots: false,
-        infinite: true,
-        speed: 500,
+        infinite: false,
+        speed: 400,
         slidesToShow: matches ? 5 : 7,
         slidesToScroll: 1,
-        arrows: false
+        arrows: false,
+        swipeToSlide: true,
+        touchThreshold: 15,
     };
 
 

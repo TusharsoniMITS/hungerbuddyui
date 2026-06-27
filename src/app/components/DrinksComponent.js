@@ -14,14 +14,16 @@ export default function DrinksComponent({ data }) {
   const theme = useTheme();
     var navigate=useRouter()
   const matches = useMediaQuery(theme.breakpoints.down('md'));
-  var settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: matches ? 5 : 7,
-    slidesToScroll: 1,
-    arrows: false
-  };
+    const settings = {
+        dots: false,
+        infinite: false,
+        speed: 400,
+        slidesToShow: matches ? 5 : 7,
+        slidesToScroll: 1,
+        arrows: false,
+        swipeToSlide: true,
+        touchThreshold: 15,
+    };
   const sliderRef = useRef()
   const [index, setIndex] = useState(0)
 
@@ -58,12 +60,12 @@ export default function DrinksComponent({ data }) {
 
       <div style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 10, marginLeft: '4%',color:'#000' }}>Drinks</div>
 
-      {matches ? <></> : <Image onClick={handlePrevious} style={{ position: 'absolute', top: '42%', zIndex: 2, cursor: 'pointer' }} src="/images/left-arrow.png" width={35} height={35} alt="" />}
+      {matches ? <></> : <Image onClick={handlePrevious} style={{ position: 'absolute', top: '42%', zIndex: 2, cursor: 'pointer' }} src="/images/left-arrow.png" width={25} height={25} alt="" />}
       <Slider ref={sliderRef} {...settings}>
         {showCategory()}
       </Slider>
 
-      {matches ? <></> : <Image onClick={handleNext} style={{ position: 'absolute', top: '42%', right: '-0.3%', zIndex: 2, cursor: 'pointer' }} src="/images/right-arrow.png" width={35} height={35} alt="" />}
+      {matches ? <></> : <Image onClick={handleNext} style={{ position: 'absolute', top: '42%', right: '-0.3%', zIndex: 2, cursor: 'pointer' }} src="/images/right-arrow.png" width={25} height={25} alt="" />}
     </div>
   )
 

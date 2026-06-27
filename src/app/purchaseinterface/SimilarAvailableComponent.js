@@ -20,6 +20,7 @@ export default function SimilarAvailableComponent({ data }) {
         slidesToScroll: 1,
         arrows: true
     };
+    
     const sliderRef = useRef()
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down("md"));

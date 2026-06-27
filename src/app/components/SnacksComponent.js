@@ -10,15 +10,17 @@ import { useRouter } from "next/navigation";
 
 export default function SnacksComponent({ data }) {
   const theme = useTheme();
-  var navigate=useRouter()
+  var navigate = useRouter()
   const matches = useMediaQuery(theme.breakpoints.down('md'));
-  var settings = {
+  const settings = {
     dots: false,
-    infinite: true,
-    speed: 500,
+    infinite: false,
+    speed: 400,
     slidesToShow: matches ? 5 : 7,
     slidesToScroll: 1,
-    arrows: false
+    arrows: false,
+    swipeToSlide: true,
+    touchThreshold: 15,
   };
   const sliderRef = useRef()
   const [index, setIndex] = useState(0)
@@ -35,7 +37,7 @@ export default function SnacksComponent({ data }) {
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '70%', height: '70%', borderRadius: '50%' }}>
             <img style={{ width: '100%' }} src={`${serverURL}/images/${item.picture}`} />
           </div>
-          <div style={{ fontSize: matches ? '0.7rem' : '1rem',color: '#111827' }}>{item.fooditemname}</div>
+          <div style={{ fontSize: matches ? '0.7rem' : '1rem', color: '#111827' }}>{item.fooditemname}</div>
         </div>
       </div>)
     })
@@ -50,14 +52,14 @@ export default function SnacksComponent({ data }) {
   return (
     <div style={{ width: '95%', marginTop: 40, position: 'relative' }}>
 
-      <div style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 10, marginLeft: '4%',color: '#000' }}>Snacks & Biscuits</div>
+      <div style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 10, marginLeft: '4%', color: '#000' }}>Snacks & Biscuits</div>
 
-      {matches ? <></> : <Image onClick={handlePrevious} style={{ position: 'absolute', top: '42%', zIndex: 2, cursor: 'pointer' }} src="/images/left-arrow.png" width={35} height={35} alt="" />}
+      {matches ? <></> : <Image onClick={handlePrevious} style={{ position: 'absolute', top: '42%', zIndex: 2, cursor: 'pointer' }} src="/images/left-arrow.png" width={25} height={25} alt="" />}
       <Slider ref={sliderRef} {...settings}>
         {showCategory()}
       </Slider>
 
-      {matches ? <></> : <Image onClick={handleNext} style={{ position: 'absolute', top: '42%', right: '-0.3%', zIndex: 2, cursor: 'pointer' }} src="/images/right-arrow.png" width={35} height={35} alt="" />}
+      {matches ? <></> : <Image onClick={handleNext} style={{ position: 'absolute', top: '42%', right: '-0.3%', zIndex: 2, cursor: 'pointer' }} src="/images/right-arrow.png" width={25} height={25} alt="" />}
     </div>
   )
 
