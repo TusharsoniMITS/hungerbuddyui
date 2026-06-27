@@ -1,5 +1,5 @@
 import axios from "axios";
-const serverURL = 'http://localhost:4000'
+const serverURL = 'https://hungerbuddybackend.onrender.com'
 function generateOTP() {
     var otp = parseInt(Math.random() * 899999) + 100000
     return otp
