@@ -48,8 +48,6 @@ export default function SnacksComponent({ data }) {
     sliderRef.current.slickNext()
   }
   return (
-
-
     <div style={{ width: '95%', marginTop: 40, position: 'relative' }}>
 
       <div style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 10, marginLeft: '4%',color: '#000' }}>Snacks & Biscuits</div>

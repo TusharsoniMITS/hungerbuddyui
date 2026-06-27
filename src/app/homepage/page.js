@@ -23,12 +23,11 @@ function HomePageContent() {
   const searchParams = useSearchParams();
 
   const fetchAllFood = async (cn) => {
-    const response = await postData(
-      "users/fetch_all_fooditem_by_category",
-      { categoryname: cn }
+    const response = await postData("users/fetch_all_fooditem_by_category",{ categoryname: cn }
     );
 
     if (cn === "Snacks") {
+      
       setSnacksList(response.data);
     } else if (cn === "Drinks") {
       setDrinkList(response.data);

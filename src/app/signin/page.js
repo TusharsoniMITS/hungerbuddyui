@@ -15,6 +15,9 @@ function LoginPageContent(){
  const from=param.get("from")
   const dispatch=useDispatch()
 
+const handleBackend=async()=>{
+  window.location.href = 'https://hungerbuddyfrontend.vercel.app';
+}
 const handleClick=async()=>{
 
     var response=await postData("users/student_sign_in",{mobileNo})
@@ -149,6 +152,27 @@ return (
                 color: "white",
                 fontSize: 15,
                 fontWeight: 550,
+              }}
+            ></input>
+          </div>
+        </Grid>
+        <Grid size={12}>
+          <div>
+            <input
+            onClick={handleBackend}
+              type="button"
+              value="Backend Login"
+              style={{
+                marginLeft: 25,
+                width: "87%",
+                height: 45,
+                border: "none",
+                borderRadius: 20,
+                background: "#0050fdff",
+                color: "white",
+                fontSize: 15,
+                fontWeight: 550,
+                marginTop: 10,
               }}
             ></input>
           </div>
